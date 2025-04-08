@@ -140,7 +140,7 @@
     <div id="mission-statement-container">
         <div id="mission-statement">
             <h1 id="mission-title">Mission Statement</h1>
-            <p id="mission-body">I am a highly motivated individual dedicated to producing performant and pleasing to use software. My programming interests align with maximizing efficient use of system resources to solve the problem at hand. I am currently seeking a position in the field of embedded systems or computer graphics programming.</p>
+            <p id="mission-body">I am a highly motivated individual dedicated to developing software with a focus on performance and the user experience. My programming interests align with maximizing efficient use of system resources to solve the problem at hand. I am currently seeking a position in the field of embedded systems or computer graphics programming.</p>
         </div>
     </div>
 
@@ -172,9 +172,12 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
-
     <script>
+        Module = {
+            print: function(text) { console.log('stdout:', text); },
+            printErr: function(text) { console.error('stderr:', text); }
+        };
+
         const canvas = document.getElementById('canvas');
         const container = document.getElementById('canvas-container');
 
@@ -185,6 +188,12 @@
             canvas.width = container.clientWidth;
             canvas.height = container.clientHeight;
         }
+    </script>
+
+    <script src="banner.js"></script>
+
+    <script>
+        window.addEventListener('resize', Module._OnWindowResize, false);
     </script>
 </body>
 </html>
