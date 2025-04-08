@@ -7,7 +7,6 @@
     <style>
         body {
             margin: 0;
-            justify-content: center;
             font-family: Arial, sans-serif;
             background-color: #fff;
         }
@@ -21,17 +20,19 @@
         }
         .navbar {
             display: flex;
-            justify-content: right;
+            margin-left: calc(373px + 90px);
+        }
+        .navbar-backdrop {
             background-color: #555;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            padding: 0 12%;
         }
         .nav-button {
-            color: white;
-            text-decoration: none;
+            min-height: 60px;
+            padding: 2% 2% 0 2%;
             font-size: 20px;
-            padding: 3vh 2%;
+            color: white;
             transition: background-color 0.3s;
+            text-decoration: none;
         }
         .nav-button:hover {
             background-color: #666;
@@ -40,18 +41,22 @@
             background-color: #777;
         }
         .portrait {
+            float: left;
             z-index: 100;
             pointer-events: none;
         }
         .portrait img {
             position: absolute;
+            width: 373px;
+            height: 439px;
             background-color: #222;
             padding: 10px 10px;
             transform: translate(15%, -50%);
         }
         .card {
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            margin: 0 60% 0 24%;
+            margin-left: calc(373px + 90px);
+            max-width: 360px
         }
         .card-line {
             margin: 8px;
@@ -89,13 +94,15 @@
         <canvas id="canvas"></canvas>
     </div>
 
-    <nav class="navbar">
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="content/portfolio.html" class="nav-button">Portfolio</a>
-        <a href="content/resume.html" class="nav-button">Resume</a>
-        <a href="content/contact.html" class="nav-button">Contact</a>
-        <a href="content/aboutme.html" class="nav-button">About Me</a>
-    </nav>
+    <div class="navbar-backdrop">
+        <nav class="navbar">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="content/portfolio.html" class="nav-button">Portfolio</a>
+            <a href="content/resume.html" class="nav-button">Resume</a>
+            <a href="content/contact.html" class="nav-button">Contact</a>
+            <a href="content/aboutme.html" class="nav-button">About Me</a>
+        </nav>
+    </div>
 
     <div class="portrait">
         <img src="resources/cropme.jpg">
